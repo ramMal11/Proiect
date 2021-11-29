@@ -2,6 +2,7 @@
 Aplicatia va gestiona logarea si inregistrarea a doua tipuri de utilizatori cu drepturi diferite in functie de tipul lui:
 - profesor
 - student 
+
 Pagina profesorului va contine un dropdown list de unde poate selecta numele proiectului pentru care vrea sa vada informatii
 legate de nota si numele studentului care a facut proiectul
 

@@ -21,10 +21,10 @@ Planul de proiect contine:
 - construirea interfetei
 
 Baza de date va fi compusa din urmatoarele tabele (tabelele mai pot suferi modificari in timpul dezvoltarii):
-Student: ID_STUDENT, Nume, Prenume, Telefon
-Profesor: ID_PROFESOR, Nume, Prenume
-Drepturi: Utilizator, Parola, Drept (P=profesor, S=student), ID_USER/STUDENT
-Proiecte: ID_PROIECT, Nume Proiect, ID_STUDENT
-Etape Proiect: ID_PROIECT, Etapa, Data limita, Livrabil
-Echipe: Nume Echipa, ID_PROIECT
-Evaluari: ID_PROIECT, ID_STUDENT/Evaluator, Nota, Data Evaluare
+- Student: ID_STUDENT, Nume, Prenume, Telefon
+- Profesor: ID_PROFESOR, Nume, Prenume
+- Drepturi: Utilizator, Parola, Drept (P=profesor, S=student), ID_USER/STUDENT
+- Proiecte: ID_PROIECT, Nume Proiect, ID_STUDENT
+- Etape Proiect: ID_PROIECT, Etapa, Data limita, Livrabil
+- Echipe: Nume Echipa, ID_PROIECT
+- Evaluari: ID_PROIECT, ID_STUDENT/Evaluator, Nota, Data Evaluare

@@ -1,10 +1,12 @@
 "use strict";
 
+//Express Initialization
 const express = require('express')
-const sequelize = require('./config/sequelize')
-require("./models/student")
-
 const app = express();
+//Sequelize Initialization
+const sequelize = require('./config/sequelize')
+
+//Express middleware
 app.use(
     express.urlencoded({
       extended: true,
@@ -12,8 +14,15 @@ app.use(
   );
   app.use(express.json());
 
-  app.use("/api", require("./routes/students"));
+  // Project routes
+  app.use("/api", require("./routes/allRoutes"));
 
+  //Middleware for 500 status error
+  app.use((err, req, res, next) => {
+    res.status(500).json({error: "Something broke!"});
+  });
+
+  //Start the application
 app.listen(7001, async() => {
     console.log("Server started on http://localhost:7001");
     try{

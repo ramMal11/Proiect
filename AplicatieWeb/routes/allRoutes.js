@@ -42,6 +42,7 @@ router
     })
 
 //GET existing user
+
 router
     .route("/users/:userEmail/:userPassword")
     .get(async (req, res) => {
@@ -55,7 +56,7 @@ router
                 }
             });
             if (user != '') {
-                return res.status(200).json(user);
+                return res.status(200).json({ token: email });
             }
             else {
                 return res.status(404).json({ error: "Invalid login!" })
@@ -64,6 +65,28 @@ router
             return res.status(500).json(err)
         }
     })
+// router
+//     .route("/users/:userEmail/:userPassword")
+//     .get(async (req, res) => {
+//         const email = req.params.userEmail;
+//         const password = req.params.userPassword;
+//         try {
+//             const user = await User.findAll({
+//                 where: {
+//                     userEmail: email,
+//                     userPassword: password
+//                 }
+//             });
+//             if (user != '') {
+//                 return res.status(200).json(user);
+//             }
+//             else {
+//                 return res.status(404).json({ error: "Invalid login!" })
+//             }
+//         } catch (err) {
+//             return res.status(500).json(err)
+//         }
+//     })
 
 // Get projects of a student
 router
